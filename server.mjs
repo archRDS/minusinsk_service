@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "dist");
+const root = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 4174);
 const files = {
   "/": ["index.html", "text/html; charset=utf-8"],
